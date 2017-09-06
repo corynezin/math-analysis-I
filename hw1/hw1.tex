@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\title{Mathematical Analysis Homework 1: Solutions}
+\author{Cory Nezin}
+\begin{document}
+\maketitle
+Let $$ S = \{ \gamma \in \mathbb{Q}: \gamma \leq 0 \text{ or } \gamma > 0
+  \text{ and } \gamma^2 < 2\} $$
+$$ T = \{ \gamma \in \mathbb{Q}: \gamma > 0 \text{ and } \gamma^2 > 2\} $$
+\begin{enumerate}
+\item Prove that $ s < t $ for $ s \in S $ and $ t \in T$ \\
+If $s \leq 0$ then since $ t > 0 $, $ t > s $\\
+If $s \geq 0$ then since $ t^2 > 2 $ and $ s^2 < 2 $, $t^2 > 2 > s^2 \rightarrow
+t^2 > s^2 \rightarrow t^2 - s^2 > 0 \rightarrow (t-s)(t+s) > 0$\\
+Since $ s \geq 0 \text { and } t > 0$, $t + s > 0$, and therefore $t - s > 0$
+or, $ t > s $ \\
+$\blacksquare$
+\item Prove that if $t \in T$ then $\exists s \in T$ such that  $s < t$\\
+Proof:
+Suppose $$s = t - \frac{t^2-2}{t+2} = \frac{2(t+1)}{t+2}$$
+Let $$ t = \frac{p}{q}; p,q \in \mathbb{Z}$$
+Then
+$$ s = \frac{2(p/q + 1)}{p/q + 2} = \frac{2p + 2q}{p + 2q} $$
+which is rational. \\
+We have 
+$$ \left(\frac{2(t+1)}{t+2}\right)^2 = 4\left(\frac{t^2 + 2t + 1}{t^2 + 4t + 4}\right)$$
+We wish to evaluate whether this is greater than 2 to see if the result is in $T$.
+Suppose
+$$ 4\left(\frac{t^2 + 2t + 1}{t^2 + 4t + 4}\right) > 2$$
+iff
+$$ \left(\frac{t^2 + 2t + 1}{t^2 + 4t + 4}\right) > 1/2$$\\
+The numerator and denominator are both squares and therefore positive, so
+$$ t^2 + 2t + 1 > t^2/2 + 2t + 2$$
+$$ t^2 > 2$$
+This is guaranteed by definition of T so s is in T.
+$ t^2 > 2 $, so $ t^2 - 2 > 0$, and \\
+$$ \frac{(t^2-2)}{t+2} > 0 \rightarrow -\frac{(t^2-2)}{t+2} < 0$$\\
+Therefore
+$$ t - \frac{t^2-2}{t+2} < t \rightarrow s > t \text{ } \forall t \in T$$
+$\blacksquare$\\
+\item Prove that if $t \in S$ then $\exists s \in S$ such that  $s > t$
+The proof follows similarly:
+Suppose $$s = t - \frac{t^2-2}{t+2} = \frac{2(t+1)}{t+2}$$
+Let $$ t = \frac{p}{q}; p,q \in \mathbb{Z}$$
+Then
+$$ s = \frac{2(p/q + 1)}{p/q + 2} = \frac{2p + 2q}{p + 2q} $$
+which is rational. \\ 
+We also have that 
+$$ \left(\frac{2(t+1)}{t+2}\right)^2 = 4\left(\frac{t^2 + 2t + 1}{t^2 + 4t + 4}\right)$$
+We wish to evaluate whether this is less than 2 to see if the result is in $S$.
+Suppose 
+$$ 4\left(\frac{t^2 + 2t + 1}{t^2 + 4t + 4}\right) \leq 2$$
+iff
+$$ \left(\frac{t^2 + 2t + 1}{t^2 + 4t + 4}\right) \leq 1/2$$
+$$ t^2 + 2t + 1 \leq t^2/2 + 2t + 2$$
+$$ t^2 < 2$$
+Since this condition is guaranteed, s is in S.\\
+If $ t \leq 0 $, then choose $s = 1$
+If $ t > 0 $, then $ t + 2 > 0$, so \\
+$$ \frac{(t^2-2)}{t+2} \leq 0 \rightarrow -\frac{(t^2-2)}{t+2} \geq 0$$
+for $t^2 < 2$ and $t > 0 \rightarrow t + 2 > 0$
+$$ t - \frac{t^2-2}{t+2} > t \rightarrow s > t \text{ } \forall t \in S$$
+$\blacksquare$\\
+\end{enumerate}
+\end{document}
