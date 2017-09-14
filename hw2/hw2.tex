@@ -5,4 +5,26 @@
 \author{Cory Nezin}
 \begin{document}
 \maketitle
+\begin{enumerate}
+\item Let $\emptyset \neq A \subseteq \mathbb{R}$.
+Suppose $\alpha = \sup A$ exists in $\mathbb{R}$.  Prove that if $\alpha \in A$, then $\alpha = max\{A\}$.  Moveover prove that $\alpha$ is unique.\\
+
+Proof:\\
+By the supremum principle,
+$ a \leq \alpha \text{ } \forall a\in A $.\\
+By the hypothesis, $ \alpha \in A$.\\
+Thus $a = max\{A\}$.  $\blacksquare$\\
+Moreover, suppose $b = max\{a\}$.  Then $b \geq a \text{ } \forall a\in A$.\\
+Since $\alpha \in A$, $b \geq \alpha$.  Since $\alpha = \sup A$, $\alpha \geq b$.\\
+By trichotemy, if $b > \alpha$ then $\alpha \ngtr b$ thus $\alpha=b$.  Therefore $b=\alpha$ and $\alpha$ is unique.  $\blacksquare$
+\item Prove that $a = \sup\{r \in Q: r < a\}$ for $a\in\mathbb{R}$.
+Proof:\\
+First we prove a useful lemma:\\
+For $a,b \in \mathbb{R}, \exists r\in\mathbb{Q}$ such that $b<r<a$.\\
+Proof:\\
+By corollary 1 to the Archimedian Principle: $\exists n\in \mathbb{N}$ such that $x > \frac{1}{n} \text{ }\forall x>0 \in \mathbb{R} \rightarrow (a-b) > \frac{1}{n} \rightarrow n(a-b) > 1$.\\
+By corollary 2 to the Archimedian Principle: $\exists m \in \mathbb{N}$ such that $nb < m < na \rightarrow b < \frac{m}{n} < a \rightarrow \exists \frac{m}{n} \in \mathbb{Q}$ such that $b < r < a \text{ }\blacksquare$\\
+
+Now since by definition of the set, $a$ is an upper bound, we must only prove that is the smallest possible upper bound.  Suppose $b<a$.  By the Lemma, $\exists r\in\mathbb{Q}$ such that $b<r<a$.  So $b$ is not an upper bound and $a$ is the least upper bound.  $\blacksquare$
+\end{enumerate}
 \end{document}
