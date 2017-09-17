@@ -1,0 +1,36 @@
+\documentclass[12pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\title{Mathematical Analysis Homework 3: Solutions}
+\author{Cory Nezin}
+\begin{document}
+\maketitle
+\begin{enumerate}
+\item Assume $\mathbb{R}$ is an ordered field satisfying least upper bound or supremum principle.  Prove that $\mathbb{R}$ has the completeness property.\\
+
+Proof:\\
+Let $\emptyset \neq A \subseteq \mathbb{R}$, A bounded above and $T = \{b \in \mathbb{R}; x \leq b \text{ }\forall x \in A\}$\\
+Let S be the complement of T: $S = \{x\in\mathbb{R};x\notin T\}$\\
+By the supremum principle, A has a least upper bound in $\mathbb{R}$.  That is, $\exists \alpha \in \mathbb{R} \text{ such that } \alpha \leq b \text{ } \forall b\in T$.\\
+
+Since S and T are complementary, they form a partition over $\mathbb{R}$, so either $\alpha \in S$ or $\alpha \in T$.\\
+
+If $\alpha \in S$ then since it the supremum of $A$, by Homework 2 it is also the maximum of S.\\
+If $\alpha \in T$ then since $\alpha \leq b \text{ } \forall b \in T$ (by the supreum principle)  $\alpha$ is the minimum of T.\\
+Thus $\mathbb{R}$ has the completeness property. $\blacksquare$
+
+\item Let $\emptyset \neq A \subseteq B \subseteq \mathbb{R}$ and given that $B$ is bounded, prove that $A$ is bounded and
+\begin{enumerate}
+\item $\sup A \leq \sup B$
+\item $\inf B \leq \inf A$
+\end{enumerate}
+Proof ($A$ is bounded):\\
+$B$ is bounded $\rightarrow \text{ } \forall b\in B, |b| \leq M \in \mathbb{R}$.\\
+$A \subseteq B \rightarrow \text{ } \forall a\in A, a\in B \rightarrow |a| \leq M$.  So $A$ is bounded. $\blacksquare$\\
+
+Proof (a):\\
+$\forall b\in B, b \leq \sup B \rightarrow a \leq \sup B \text{ } \forall a\in A \rightarrow \sup B$ is an upper bound for $A$.  So $\sup A \leq \sup B$ $\blacksquare$\\
+Proof (b):\\
+$\forall b\in B, b \geq \inf B \rightarrow a \geq \inf B \text{ } \forall a\in A \rightarrow \inf B$ is a lower bound for $A$.  So $\inf A \geq \inf B$ $\blacksquare$
+\end{enumerate}
+\end{document}
