@@ -9,11 +9,10 @@
 \item Assume $\mathbb{R}$ is an ordered field satisfying least upper bound or supremum principle.  Prove that $\mathbb{R}$ has the completeness property.\\
 
 Proof:\\
-Let $\emptyset \neq A \subseteq \mathbb{R}$, A bounded above and $T = \{b \in \mathbb{R}; x \leq b \text{ }\forall x \in A\}$\\
-Let S be the complement of T: $S = \{x\in\mathbb{R};x\notin T\}$\\
+Let $\emptyset \neq A\subseteq \mathbb{R}$ be bounded above and not below. Let $T = \{b \in \mathbb{R}; x \leq b \text{ }\forall x \in A\}$\\
 By the supremum principle, A has a least upper bound in $\mathbb{R}$.  That is, $\exists \alpha \in \mathbb{R} \text{ such that } \alpha \leq b \text{ } \forall b\in T$.\\
 
-Since S and T are complementary, they form a partition over $\mathbb{R}$, so either $\alpha \in S$ or $\alpha \in T$.\\
+For any $x\in \mathbb{R}$ if $x\notin A$, $x>a\text{ }\forall a\in A$ (since $A$ is not bounded below) thus $x\in T$ Therefore $A$ and $T$ form a partition over $\mathbb{R}$, so either $\alpha \in S$ or $\alpha \in T$.\\
 
 If $\alpha \in S$ then since it the supremum of $A$, by Homework 2 it is also the maximum of S.\\
 If $\alpha \in T$ then since $\alpha \leq b \text{ } \forall b \in T$ (by the supreum principle)  $\alpha$ is the minimum of T.\\
