@@ -1,0 +1,137 @@
+\documentclass[12pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\title{Mathematical Analysis Homework 4: Solutions}
+\author{Cory Nezin}
+\begin{document}
+\maketitle
+\begin{enumerate}
+\item Prove that every interval $I$ is one of the nine types:
+\begin{enumerate}
+\item $I = [a,b]$
+\item $I = (a,b)$
+\item $I = (a,b]$
+\item $I = [a,b)$
+\item $I = (-\infty, b]$
+\item $I = (-\infty, b)$
+\item $I = (a,\infty)$
+\item $I = [a,\infty)$
+\item $I = (-\infty,\infty)$
+\end{enumerate}
+Proof:\\
+Since the cardinality of an interval must be at least $2$, the interval is not empty and not singleton.\\
+We seperate the proof into two cases: $I$ is bounded (1) and $I$ is not bounded (2).\\
+We further seperate case 1 into four cases: 
+\begin{enumerate}
+\item $\sup I \in I \inf I \in I$
+\item $\inf I \notin I, \sup I \notin I$
+\item $\sup I \notin I, \inf I \in I$
+\item $\sup I \in I, \inf I \notin I$
+\end{enumerate}
+Let $b = \sup I, a = \inf I$\\
+\begin{enumerate}
+\item Case 1.a:\\
+Since $a\in I$ and $b\in I$, by definition of interval, $\forall x\in \mathbb{R} \text{ where } a\leq x\leq b \rightarrow x\in I$ so $[a,b] \subseteq I$.  By defintion of $\sup$ and $\inf$, $x\in I \rightarrow a\leq x\leq b \rightarrow x\in [a,b]$.  Therefore $I = [a,b]$
+
+\item Case 1.b:\\
+Since $|I| \geq 2, \exists x,y\in I \text{ such that } a<x<y<b$\\
+$\forall t\in (a,b), a<t<b$.  \\
+There are one of three possibilities:\\
+If $x<t<y, t\in I$ by definition of an interval.\\
+If $a < t < x, \text{ since $\inf I < t$, t is not a lower bound of I } \rightarrow \exists z\in I \text{ such that } z < t$.  Since $z<t<x$, $t\in I$\\
+If $y < t < b, \text{ since $\sup I > t$, t is not a upper bound of I } \rightarrow \exists z\in I \text{ such that } t < z$.  Since $y<t<z$, $t\in I$\\
+so $(a,b) \subseteq I$\\
+Since $\sup I = b$ and $\inf I = a$, $\forall t\in I, a<t<b \rightarrow t\in (a,b) \rightarrow I \subseteq (a,b)$ and thus $I=(a,b)$
+
+\item Case 1.c:\\
+Since $|I| \geq 2, \exists x,y\in I \text{ such that } a<x<y<b$\\
+$\forall t\in (a,b], a<t<b$.  \\
+There are one of four possibilities:\\
+If $x<t<y, t\in I$ by definition of an interval.\\
+If $a < t < x, \text{ since $\inf I < t$, t is not a lower bound of I } \rightarrow \exists z\in I \text{ such that } z < t$.  Since $z<t<x$, $t\in I$\\
+If $y < t < b, \text{ since $\sup I > t$, t is not a upper bound of I } \rightarrow \exists z\in I \text{ such that } t < z$.  Since $y<t<z$, $t\in I$\\
+If $t=b$, then since $b = \sup I \in I$, $t\in I$
+so $(a,b) \subseteq I$\\
+Since $\sup I = b$ and $\inf I = a$, $\forall t\in I, a<t<b \rightarrow t\in (a,b) \rightarrow I \subseteq (a,b)$ and thus $I=(a,b)$
+\item Case 1.d:\\
+Since $|I| \geq 2, \exists x,y\in I \text{ such that } a<x<y<b$\\
+$\forall t\in (a,b], a<t<b$.  \\
+There are one of four possibilities:\\
+If $x<t<y, t\in I$ by definition of an interval.\\
+If $a < t < x, \text{ since $\inf I < t$, t is not a lower bound of I } \rightarrow \exists z\in I \text{ such that } z < t$.  Since $z<t<x$, $t\in I$\\
+If $y < t < b, \text{ since $\sup I > t$, t is not a upper bound of I } \rightarrow \exists z\in I \text{ such that } t < z$.  Since $y<t<z$, $t\in I$\\
+If $a=t$, then since $a = \inf I \in I$, $t\in I$
+so $(a,b) \subseteq I$\\
+Since $\sup I = b$ and $\inf I = a$, $\forall t\in I, a<t<b \rightarrow t\in (a,b) \rightarrow I \subseteq (a,b)$ and thus $I=(a,b)$\\
+\end{enumerate}
+We now suppose I is unbounded and consider the 5 possible cases:
+\begin{enumerate}
+\item I is bounded above, $b = \sup I \in I$
+\item I is bounded above, $b = \sup I \notin I$
+\item I is bounded below, $a = \inf I \in I$
+\item I is bounded below, $a = \inf I \notin I$
+\item I is bounded neither above nor below.
+\end{enumerate}
+\begin{enumerate}
+\item $(-\infty,b] = \{t\in\mathbb{R}, t \leq b\}$\\
+Since $I$ is not bounded below, $\forall a\in \mathbb{R}, \exists x\in I \text{ such that } x < a$\\
+Suppose $t\in (-\infty,b]$, then either:\\
+$t < x \rightarrow \exists z\in I \text{ such that } z < t \rightarrow z<t<x \rightarrow t\in I$ or\\
+$t = x \rightarrow t\in I$ or\\
+$t > x \rightarrow x < t < b \rightarrow t\in I$\\
+So $(-\infty,b] \subseteq I$.\\
+Since $\sup I = b, \forall t\in I, t \leq b \rightarrow t \in (-\infty,b] \rightarrow I\subseteq (-\infty,b]$\\
+So $I = (-\infty,b]$
+\item $(-\infty,b) = \{t\in\mathbb{R},t<b\}$\\
+Since $I$ is not bounded below, $\forall a\in \mathbb{R}, \exists x\in I \text{ such that } x < a$\\
+Suppose $t\in (-\infty,b)$, then either:\\
+$t < x \rightarrow \exists z\in I \text{ such that } z < t \rightarrow z<t<x \rightarrow t\in I$ or\\
+$t = x \rightarrow t\in I$ or\\
+$t > x \rightarrow x < t < b$.  Since t can not be an upper bound for I, $\exists y\in I$ such that $y > t$ so $x < t < y$ and $t\in I$\\
+So $(-\infty,b] \subseteq I$.\\
+Since $\sup I = b, \forall t\in I, t < b \rightarrow t \in (-\infty,b) \rightarrow I\subseteq (-\infty,b)$\\
+So $I = (-\infty,b)$
+\item $[a,\infty) = \{t\in\mathbb{R}, t \geq a\}$\\
+
+Since $I$ is not bounded above, $\forall b\in \mathbb{R}, \exists x\in I \text{ such that } x > b$\\
+Suppose $t\in [a,\infty)$, then either:\\
+$x < t \rightarrow \exists z\in I \text{ such that } z > t \rightarrow x<t<z \rightarrow t\in I$ or\\
+$x = t \rightarrow t\in I$ or\\
+$x > t \rightarrow a < t < x \rightarrow t\in I$\\
+So $[a,\infty) \subseteq I$.\\
+Since $\inf I = a, \forall t\in I, t > a \rightarrow t \in [a,\infty] \rightarrow I\subseteq [a,\infty)$\\
+So $I = [a,\infty)$
+
+\item $(a,\infty) = \{t\in\mathbb{R}, t > a\}$\\
+Since $I$ is not bounded above, $\forall b\in \mathbb{R}, \exists x\in I \text{ such that } x > b$\\
+Suppose $t\in (a,\infty)$, then either:\\
+$x < t \rightarrow \exists z\in I \text{ such that } z > t \rightarrow x<t<z \rightarrow t\in I$ or\\
+$x = t \rightarrow t\in I$ or\\
+$x > t \rightarrow a < t < x$.  Since $t$ is not a lower bound, $\exists z\in I$ such that $z<t<x$ so $t\in I$.\\
+So $(a,\infty) \subseteq I$.\\
+Since $\inf I = a, \forall t\in I, t > a \rightarrow t \in (a,\infty) \rightarrow I\subseteq (a,\infty)$\\
+So $I = (a,\infty)$
+\item $(-\infty,\infty) = \mathbb{R}$\\
+Since $I$ is bounded neither above nor below, $\forall a \in \mathbb{R}, \exists x\in I \text{ such that } x < a$ and $\forall b \in \mathbb{R}, \exists y\in I \text{ such that } b < y$.
+Thus, $\forall t\in \mathbb{R}, \exists x,y\in I \text{ such that } x<t<y \rightarrow t\in I$\\
+So $\mathbb{R} \subseteq I$.\\
+By definition of intervals, $I \subseteq \mathbb{R}$.\\
+So $I = (-\infty,\infty)$\\
+Thus the nine intervals listed are the only types.
+$\blacksquare$
+\end{enumerate}
+\item Let $\{I_\alpha\}_{\alpha\in A}$ be a collection of intervals in $\mathbb{R}$ where $A\neq \emptyset$.  Prove that $I = \bigcap_{\alpha\in A} I_{\alpha}$ is one of the following types:
+\begin{enumerate}
+\item $\emptyset$
+\item $\{a\}$
+\item An interval
+\end{enumerate}
+Proof:\\
+In the case where the intersection contains no elements (e.g. $(-1,0)$ and $(0,1)$) we have case (a).\\
+In the case where the intersection contains one element (e.g. $(-1,0]$ and $[0,1)$) we have case (b).\\
+Now we examine the case where the intersection has two or more elements.\\
+The first requirement of an interval is clearly satisfied.  Suppose the two elements in the intersection are $a$ and $b$ and $a<b$.\\
+Since $a,b\in I_\alpha \text{ }\forall \alpha$, if $\exists t\in\mathbb{R}$ such that $a<t<b, t\in I_\alpha$.  So since $t$ is in every interval, it must be in the intersection of every interval.  Therefore the intersection satisfies both properties of intervals and it is an interval. $\blacksquare$
+
+\end{enumerate}
+\end{document}

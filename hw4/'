@@ -1,0 +1,26 @@
+\documentclass[12pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\title{Mathematical Analysis Homework 4: Solutions}
+\author{Cory Nezin}
+\begin{document}
+\maketitle
+\begin{enumerate}
+\item Prove that every interval $I$ is one of the nine types:
+\begin{enumerate}
+\item $I = [a,b]$
+\item $I = (a,b)$
+\item $I = (a,b]$
+\item $I = [a,b)$
+\item $I = (-\infty, b]$
+\item $I = (-\infty, b)$
+\item $I = (a,\infty)$
+\item $I = [a,\infty)$
+\item $I = (-\infty,\infty)$
+\end{enumerate}
+Proof:\\
+We seperate the proof into two cases: $I$ is bounded (1) and $I$ is not bounded (2).\\
+Case 1:\\
+
+\end{enumerate}
+\end{document}
