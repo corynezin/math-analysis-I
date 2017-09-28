@@ -1,0 +1,24 @@
+\documentclass[12pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\title{Mathematical Analysis Homework 5: Solutions}
+\author{Cory Nezin}
+\begin{document}
+\maketitle
+\begin{enumerate}
+\item Let $\{a_n\}_{n=1}^\infty \subseteq [0,\infty)$ and assume $\lim_{n\to\infty}a_n = a, a\subseteq \mathbb{R}$.  Prove that $a\geq 0$.\\
+Proof:\\
+$a_n\geq 0 \implies a-a_n \leq a \implies a_n-a\geq -a$\\
+Suppose $a<0 \implies -a > 0 \implies a_n - a > 0$\\
+Thus $|a_n-a| \geq |a|$\\
+But since $|a|>0$, $\lim_{n\to\infty}a_n \neq a$, a contradiction.\\
+So $a \geq 0$. $\blacksquare$\\
+\item Assume $\lim_{n\to\infty}b_n=b$ exists and $b \neq 0$.  Prove that $b_n \neq 0$ for $n\geq N$ for some $N\in\mathbb{N}$.\\
+Proof:\\
+We give a proof by contrapositive:\\
+If $b_n = 0$ for some $n\geq N$ for all $N\in\mathbb{N}$\\
+Then $|b_n-b| = |b|$ for some $n>N$, $\forall N\in\mathbb{N}$\\
+Either $b = 0$ or\\
+If $|b| > 0$ we have $\lim_{n\to\infty}b_n \neq b$ which is the negation of the hypothesis. $\blacksquare$
+\end{enumerate}
+\end{document}
