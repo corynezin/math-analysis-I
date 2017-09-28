@@ -1,0 +1,44 @@
+\documentclass[12pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\title{Mathematical Analysis Homework 6: Solutions}
+\author{Cory Nezin}
+\begin{document}
+\maketitle
+\begin{enumerate}
+\item Define $d: \mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R}$ by $d(a,b) = |a-b|$\\
+Prove that:
+\begin{enumerate}
+\item $d(a,b) \geq 0$
+\item $d(a,b) = 0 \implies a = b$
+\item $d(a,b) = d(b,a)$
+\item $d(a,b) \leq d(a,c) + d(c,b)$
+\end{enumerate}
+Proof (a):\\
+$d(a,b) = |a-b|$.  Since $|x| \geq 0\text{ }\forall x\in\mathbb{R}, |a-b|>0$. $\blacksquare$\\
+Proof (b,$\implies$):\\
+$0 = d(a,b) = |a-b| \implies a-b = 0\implies a=b$\\
+Proof (b,$\impliedby$):\\
+$d(a,b) = |a-b| = |b-b| = |0| = 0$. $\blacksquare$\\
+Proof (c):\\
+$d(a,b) = |a-b| = |-1||a-b| = |(-1)(a-b)| = |b-a| = d(b,a)$. $\blacksquare$\\
+Proof (d):\\
+$d(a,b) = |a-b| = |a-c+(c-b)| \leq |a-c| + |c-b| = d(a,c) + d(c,b)$. $\blacksquare$
+\item (ii) Let $1 < a \in \mathbb{R}$.  Prove that $\{a^n\}_{n=1}^\infty$ is not bounded above.\\
+Proof:\\
+Suppose the sequence is bounded, then by the monotone convergence theorem, the sequence converges.\\
+So let $\lim_{n\to\infty}a^n = L$\\
+Then $\exists N\in\mathbb{N} \text{ such that } |a^n-L| < \epsilon \text{ } \forall n \geq N \implies$\\
+$|a^{N+M+1}-L| < \epsilon$ for $M \geq 0\implies$\\
+$|a\times a^{N+M}-L| < \epsilon\implies$\\
+$|a||a^{N+M}-\frac{L}{a}| < \epsilon \text{(since $a \neq 0$)}\implies$\\
+$|a^{N+M} - \frac{L}{a}| < \frac{\epsilon}{|a|} < \epsilon$ (since $|a| > 1$) $\implies$\\
+For any $m = N + M \geq N$, $|a^{m} - \frac{L}{|a|}| < \frac{\epsilon}{|a|} < \epsilon$\\
+$\lim_{M\to\infty}a_M = \frac{L}{|a|}$\\
+Since $a\neq 1$, this is a contradiction, so the sequence must not be bounded. $\blacksquare$\\
+(i) Prove that $\{10^n\}_{n=1}^\infty$ is not bounded above.\\
+Proof:\\
+Since $\mathbb{R} \ni 10 > 1$, this is proved by 2 (ii). $\blacksquare$
+
+\end{enumerate}
+\end{document}
